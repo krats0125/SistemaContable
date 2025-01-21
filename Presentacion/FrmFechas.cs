@@ -14,9 +14,11 @@ namespace SistemaContable.Presentacion
     {
         string fechaInicio;
         string fechaFin;
-        public FrmFechas()
+        bool esMensajero = false;
+        public FrmFechas(bool esMensajero)
         {
             InitializeComponent();
+            this.esMensajero = esMensajero;
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
@@ -24,12 +26,24 @@ namespace SistemaContable.Presentacion
             fechaInicio = dpFechaInicio.Value.ToString("yyyy-MM-dd");
             fechaFin = dpFechaFin.Value.ToString("yyyy-MM-dd");
 
-            if(fechaInicio!=null && fechaFin!=null)
+            if (!string.IsNullOrEmpty(fechaInicio) && !string.IsNullOrEmpty(fechaFin))
             {
-                FrmPrestamosMesMensajeros prestamosForm = new FrmPrestamosMesMensajeros(fechaInicio, fechaFin);
-                prestamosForm.Show();
+                if (esMensajero)
+                {
+                    FrmPrestamosMesMensajeros prestamosForm = new FrmPrestamosMesMensajeros(fechaInicio, fechaFin);
+                    prestamosForm.Show();
+                }
+                else
+                {
+                    FrmPrestamosMesTrabajadores prestamosForm = new FrmPrestamosMesTrabajadores(fechaInicio, fechaFin);
+                    prestamosForm.Show();
+                }
+               
             }
-          
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un rango de fechas válido.");
+            }
         }
     }
 }

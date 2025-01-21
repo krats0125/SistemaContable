@@ -36,6 +36,47 @@ namespace SistemaContable.Presentacion
                 pbLogo.Visible = true;
                 BtnMenu.Location = new Point(150, 5);
             }
-        } 
+        }
+        private Dictionary<Type, Form> InstanciaDelFormulario = new Dictionary<Type, Form>();
+        private void AbrirFormularioEnPanel<T>(FrmMenu menu) where T : Form
+        {
+            Type formType = typeof(T);
+
+            // Verificar si ya existe una instancia del formulario
+            if (InstanciaDelFormulario.ContainsKey(formType))
+            {
+                Form ExisteFormulario = InstanciaDelFormulario[formType];
+                if (!ExisteFormulario.IsDisposed)
+                {
+                    ExisteFormulario.BringToFront(); // Traer el formulario al frente si está oculto detrás de otros controles
+                    return;
+                }
+                // Si el formulario está desechado, eliminar la instancia
+                InstanciaDelFormulario.Remove(formType);
+            }
+
+            // Crear una nueva instancia del formulario con el formulario Principal como parámetro
+            Form FormularioHijo = (Form)Activator.CreateInstance(typeof(T), menu); // Usar Activator para pasar parámetros
+            FormularioHijo.TopLevel = false;
+            FormularioHijo.FormBorderStyle = FormBorderStyle.None;
+            FormularioHijo.Dock = DockStyle.Fill;
+
+            // Agregar el formulario al panel
+            panelCentral.Controls.Add(FormularioHijo);
+            FormularioHijo.Show();
+
+            // Almacenar la instancia del formulario en el diccionario
+            InstanciaDelFormulario.Add(formType, FormularioHijo);
+        }
+
+        private void btnTrabajadores_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioEnPanel<FrmTrabajadores>(this);
+        }
+
+        private void FrmMenu_Load(object sender, EventArgs e)
+        {
+            AbrirFormularioEnPanel<FrmTrabajadores>(this);
+        }
     }
 }

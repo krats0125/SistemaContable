@@ -18,7 +18,8 @@ namespace SistemaContable.Presentacion
         DataTable datos;
         PagoMensajeros pago = new PagoMensajeros();
         Trabajador trabajador = new Trabajador();
-        public FrmTrabajadores()
+        bool esMensajero = false;
+        public FrmTrabajadores(FrmMenu menu)
         {
             InitializeComponent();
         }
@@ -28,6 +29,8 @@ namespace SistemaContable.Presentacion
             TraerMensajeros();
             TraerPagosDiaMensajeros();
             TraerPrestamosMensajerosDia();
+            dgvMensajeros.ClearSelection();
+            dgvTrabajadores.ClearSelection();
         }
 
         #region Mensajeros
@@ -95,17 +98,18 @@ namespace SistemaContable.Presentacion
         }
         private void btnPrestarMensajero_Click(object sender, EventArgs e)
         {
-            if (dgvMensajeros.SelectedRows.Count > 0)
-            {
-                trabajador.Documento = dgvMensajeros.SelectedRows[0].Cells["Documento"].Value.ToString();
-                trabajador.Nombre = dgvMensajeros.SelectedRows[0].Cells["Nombre"].Value.ToString();
-                FrmPrestamos frm = new FrmPrestamos(trabajador);
-                frm.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Seleccione un mensajero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            esMensajero = true;
+                if (dgvMensajeros.SelectedRows.Count > 0)
+                {
+                    trabajador.Documento = dgvMensajeros.SelectedRows[0].Cells["Documento"].Value.ToString();
+                    trabajador.Nombre = dgvMensajeros.SelectedRows[0].Cells["Nombre"].Value.ToString();
+                    FrmPrestamos frm = new FrmPrestamos(trabajador,esMensajero);
+                    frm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione un mensajero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
         }
         private void btnPagarMensajero_Click(object sender, EventArgs e)
         {
@@ -122,6 +126,13 @@ namespace SistemaContable.Presentacion
             }
  
         }
+
+        private void btnPrestamosmesMensajero_Click(object sender, EventArgs e)
+        {
+            esMensajero = true;
+            FrmFechas frm = new FrmFechas(esMensajero);
+            frm.Show();
+        }
         #endregion
 
         #region Trabajadores
@@ -134,6 +145,7 @@ namespace SistemaContable.Presentacion
                 DataTable dt = new SentenciasSqlServer().TraerDatos(consulta, conexion.conexionLaBodegaDeNacho());
                 dgvTrabajadores.DataSource = dt;
                 datos = dt.Copy();
+                dgvTrabajadores.ClearSelection();
             }
             catch (Exception ex)
             {
@@ -146,7 +158,8 @@ namespace SistemaContable.Presentacion
             try
             {
                 string consulta = @"select pm.FechaRealizacion,m.nombre as Nombre,pm.Pago,pm.Adelanto,pm.Total_Pago,pm.Concepto,pm.MedioPago
-                                  from tbl_Pagos pm inner join TRABAJADORES m on pm.Idtrabajador=m.IdTrabajador";
+                                  from tbl_Pagos pm inner join TRABAJADORES m on pm.Idtrabajador=m.IdTrabajador 
+								  where CONVERT(date,FechaRealizacion)=CONVERT(date,GETDATE())";
                 DataTable dt = new SentenciasSqlServer().TraerDatos(consulta, conexion.conexionLaBodegaDeNacho());
                 dgvPagosDiaTrabajador.DataSource = dt;
             }
@@ -170,6 +183,31 @@ namespace SistemaContable.Presentacion
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void btnPrestarTrabajador_Click(object sender, EventArgs e)
+        {
+            esMensajero = false;
+            if (dgvTrabajadores.SelectedRows.Count>0)
+            {
+               trabajador.Documento=dgvTrabajadores.SelectedRows[0].Cells["Documento"].Value.ToString();
+               trabajador.Nombre=dgvTrabajadores.SelectedRows[0].Cells["Nombre"].Value.ToString();
+                FrmPrestamos frmPrestamos = new FrmPrestamos(trabajador,esMensajero);
+                frmPrestamos.Show();
+            }
+        }
+        private void txtBuscarTrabajadores_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txtBuscarTrabajadores.Text.ToLower();
+            if (filtro.Length > 0)
+            {
+                DataTable dt = datos.Copy();
+                dt.DefaultView.RowFilter = $"Nombre like '%{filtro}%' or Documento like '%{filtro}%'";
+                dgvTrabajadores.DataSource = dt;
+            }
+            else
+            {
+                dgvTrabajadores.DataSource = datos;
+            }
+        }
 
         #endregion
 
@@ -189,16 +227,19 @@ namespace SistemaContable.Presentacion
                 if (dgvTrabajadores.DataSource == null)
                 {
                     TraerTrabajadores();
-                    //TraerPagosDiaTrabajadores();
+                    TraerPagosDiaTrabajadores();
                     TraerPrestamosTrabajadoresDia();
                 }
             }
         }
 
-        private void btnPrestamosmesMensajero_Click(object sender, EventArgs e)
+        private void btnPrestamosmesTrabajador_Click(object sender, EventArgs e)
         {
-            FrmFechas frm = new FrmFechas();
-            frm.Show();
+            esMensajero = false;
+            FrmFechas frmFechas = new FrmFechas(esMensajero);
+            frmFechas.Show();
         }
+
+ 
     }
 }

@@ -34,7 +34,6 @@
             this.PanelSuperior = new System.Windows.Forms.Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.lbDocumento = new System.Windows.Forms.Label();
             this.lbNombre = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
@@ -64,7 +63,6 @@
             // 
             this.PanelSuperior.Controls.Add(this.guna2ControlBox1);
             this.PanelSuperior.Controls.Add(this.guna2ControlBox2);
-            this.PanelSuperior.Controls.Add(this.guna2ControlBox3);
             this.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelSuperior.Location = new System.Drawing.Point(0, 0);
             this.PanelSuperior.Name = "PanelSuperior";
@@ -91,23 +89,10 @@
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.ForeColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(614, 2);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(652, 2);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(32, 20);
             this.guna2ControlBox2.TabIndex = 4;
-            // 
-            // guna2ControlBox3
-            // 
-            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox3.ForeColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(652, 2);
-            this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(32, 20);
-            this.guna2ControlBox3.TabIndex = 5;
             // 
             // lbDocumento
             // 
@@ -375,7 +360,6 @@
         private System.Windows.Forms.Panel PanelSuperior;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private System.Windows.Forms.Label lbDocumento;
         private System.Windows.Forms.Label lbNombre;
         private System.Windows.Forms.Label label;

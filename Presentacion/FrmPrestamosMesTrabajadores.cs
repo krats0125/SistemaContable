@@ -12,22 +12,20 @@ using System.Windows.Forms;
 
 namespace SistemaContable.Presentacion
 {
-    public partial class FrmPrestamosMesMensajeros : Form
+    public partial class FrmPrestamosMesTrabajadores : Form
     {
         private string fechaInicio;
         private string fechaFin;
-        public FrmPrestamosMesMensajeros(string fechaInicio,string fechaFin)
+        public FrmPrestamosMesTrabajadores(string fechaInicio,string fechaFin)
         {
             InitializeComponent();
             this.fechaInicio = fechaInicio;
             this.fechaFin = fechaFin;
         }
-
-        private void FrmPrestamosMesMensajeros_Load(object sender, EventArgs e)
+        private void FrmPrestamosMesTrabajadores_Load(object sender, EventArgs e)
         {
             traerDeudas();
         }
-
         private void traerDeudas()
         {
             DateTime startDate = DateTime.Parse(fechaInicio);
@@ -106,16 +104,16 @@ namespace SistemaContable.Presentacion
                 dateValues.Length -= 2;
 
             string query = $@"
-            SELECT 
-            Nombre, 
-            {dateValues} 
-            FROM 
-            (SELECT m.Nombre, pm.Valor, CONVERT(VARCHAR, pm.Fecha, 23) AS Fecha
-             FROM PRESTAMOS_MENSAJEROS pm 
-             INNER JOIN MENSAJEROS m ON pm.IdTrabajador = m.IdTrabajador
-             WHERE pm.Fecha BETWEEN '{startDate:yyyy-MM-dd}' AND '{endDate:yyyy-MM-dd}') AS SourceTable
-             PIVOT
-            (SUM(Valor) FOR Fecha IN ({dateColumns})) AS PivotTable;";
+             SELECT 
+             Nombre, 
+             {dateValues} 
+             FROM 
+             (SELECT t.Nombre, p.Valor, CONVERT(VARCHAR, p.Fecha, 23) AS Fecha
+              FROM PRESTAMOS p 
+              INNER JOIN TRABAJADORES t ON p.IdTrabajador = t.IdTrabajador
+              WHERE p.Fecha BETWEEN '{startDate:yyyy-MM-dd}' AND '{endDate:yyyy-MM-dd}') AS SourceTable
+              PIVOT
+             (SUM(Valor) FOR Fecha IN ({dateColumns})) AS PivotTable;";
 
             return query;
         }
@@ -144,5 +142,7 @@ namespace SistemaContable.Presentacion
 
             return resultados;
         }
+
+       
     }
 }

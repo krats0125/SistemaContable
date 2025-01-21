@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Modelos\CuentaCobro.cs" />
     <Compile Include="Modelos\PrestamoMensajero.cs" />
+    <Compile Include="Modelos\PrestamoTrabajadores.cs" />
     <Compile Include="Modelos\Trabajador.cs" />
     <Compile Include="Modelos\PagoMensajeros.cs" />
     <Compile Include="Presentacion\FrmFechas.cs">
@@ -106,6 +107,12 @@
     <Compile Include="Presentacion\FrmPrestamosMesMensajeros.Designer.cs">
       <DependentUpon>FrmPrestamosMesMensajeros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\FrmPrestamosMesTrabajadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmPrestamosMesTrabajadores.Designer.cs">
+      <DependentUpon>FrmPrestamosMesTrabajadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmTrabajadores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +125,7 @@
     <Compile Include="Repositorios\CuentaDeCobroRepository.cs" />
     <Compile Include="Repositorios\PagoMensajerosRepository.cs" />
     <Compile Include="Repositorios\PrestamoMensajerosRepository.cs" />
+    <Compile Include="Repositorios\PrestamoTrabajadoresRepository.cs" />
     <Compile Include="Repositorios\Utilitarios\CONEXION.cs" />
     <Compile Include="Repositorios\Utilitarios\SentenciasSqlServer.cs" />
     <EmbeddedResource Include="Presentacion\FrmFechas.resx">
@@ -137,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmPrestamosMesMensajeros.resx">
       <DependentUpon>FrmPrestamosMesMensajeros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmPrestamosMesTrabajadores.resx">
+      <DependentUpon>FrmPrestamosMesTrabajadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmTrabajadores.resx">
       <DependentUpon>FrmTrabajadores.cs</DependentUpon>
