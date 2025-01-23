@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +35,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,6 +60,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modelos\CuentaCobro.cs" />
+    <Compile Include="Modelos\PrestamoMensajero.cs" />
+    <Compile Include="Modelos\PrestamoTrabajadores.cs" />
+    <Compile Include="Modelos\Trabajador.cs" />
+    <Compile Include="Modelos\PagoMensajeros.cs" />
+    <Compile Include="Presentacion\FrmFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmFechas.Designer.cs">
+      <DependentUpon>FrmFechas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,22 +83,74 @@
     <Compile Include="Presentacion\FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\FrmPagoMensajeros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmPagoMensajeros.Designer.cs">
+      <DependentUpon>FrmPagoMensajeros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmPagoProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\FrmPagoProveedores.Designer.cs">
       <DependentUpon>FrmPagoProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\FrmPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmPrestamos.Designer.cs">
+      <DependentUpon>FrmPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmPrestamosMesMensajeros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmPrestamosMesMensajeros.Designer.cs">
+      <DependentUpon>FrmPrestamosMesMensajeros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmPrestamosMesTrabajadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmPrestamosMesTrabajadores.Designer.cs">
+      <DependentUpon>FrmPrestamosMesTrabajadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmTrabajadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmTrabajadores.Designer.cs">
+      <DependentUpon>FrmTrabajadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Presentacion\FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
+    <Compile Include="Repositorios\ConvertirRepository.cs" />
+    <Compile Include="Repositorios\CuentaDeCobroRepository.cs" />
+    <Compile Include="Repositorios\PagoMensajerosRepository.cs" />
+    <Compile Include="Repositorios\PrestamoMensajerosRepository.cs" />
+    <Compile Include="Repositorios\PrestamoTrabajadoresRepository.cs" />
+    <Compile Include="Repositorios\Utilitarios\CONEXION.cs" />
+    <Compile Include="Repositorios\Utilitarios\SentenciasSqlServer.cs" />
+    <EmbeddedResource Include="Presentacion\FrmFechas.resx">
+      <DependentUpon>FrmFechas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmPagoMensajeros.resx">
+      <DependentUpon>FrmPagoMensajeros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmPagoProveedores.resx">
       <DependentUpon>FrmPagoProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmPrestamos.resx">
+      <DependentUpon>FrmPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmPrestamosMesMensajeros.resx">
+      <DependentUpon>FrmPrestamosMesMensajeros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmPrestamosMesTrabajadores.resx">
+      <DependentUpon>FrmPrestamosMesTrabajadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmTrabajadores.resx">
+      <DependentUpon>FrmTrabajadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -104,9 +175,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Modelos\" />
-    <Folder Include="Repositorios\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
