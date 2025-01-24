@@ -76,7 +76,13 @@ namespace SistemaContable.Presentacion
 
         private void FrmMenu_Load(object sender, EventArgs e)
         {
+            AbrirFormularioEnPanel<FrmPagoProveedores>(this);
             AbrirFormularioEnPanel<FrmTrabajadores>(this);
+        }
+
+        private void btnPagoProveedores_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioEnPanel<FrmPagoProveedores>(this);
         }
     }
 }

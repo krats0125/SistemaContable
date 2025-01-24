@@ -43,13 +43,12 @@
             // 
             // PanelSuperior
             // 
-            this.PanelSuperior.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelSuperior.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PanelSuperior.Controls.Add(this.guna2ControlBox1);
             this.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelSuperior.Location = new System.Drawing.Point(0, 0);
-            this.PanelSuperior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelSuperior.Name = "PanelSuperior";
-            this.PanelSuperior.Size = new System.Drawing.Size(841, 31);
+            this.PanelSuperior.Size = new System.Drawing.Size(631, 27);
             this.PanelSuperior.TabIndex = 9;
             // 
             // guna2ControlBox1
@@ -59,10 +58,9 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.ForeColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(792, 2);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(592, 2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(43, 25);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(32, 20);
             this.guna2ControlBox1.TabIndex = 3;
             // 
             // dpFechaInicio
@@ -71,12 +69,11 @@
             this.dpFechaInicio.FillColor = System.Drawing.SystemColors.ActiveCaption;
             this.dpFechaInicio.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dpFechaInicio.Location = new System.Drawing.Point(83, 147);
-            this.dpFechaInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dpFechaInicio.Location = new System.Drawing.Point(62, 119);
             this.dpFechaInicio.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dpFechaInicio.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dpFechaInicio.Name = "dpFechaInicio";
-            this.dpFechaInicio.Size = new System.Drawing.Size(291, 44);
+            this.dpFechaInicio.Size = new System.Drawing.Size(218, 36);
             this.dpFechaInicio.TabIndex = 10;
             this.dpFechaInicio.Value = new System.DateTime(2025, 1, 17, 12, 42, 8, 61);
             // 
@@ -86,10 +83,9 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(64)))));
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(83, 112);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(62, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 32);
+            this.label1.Size = new System.Drawing.Size(62, 25);
             this.label1.TabIndex = 11;
             this.label1.Text = "Inicio:";
             // 
@@ -99,10 +95,9 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(64)))));
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(470, 112);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(352, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 32);
+            this.label2.Size = new System.Drawing.Size(41, 25);
             this.label2.TabIndex = 13;
             this.label2.Text = "Fin:";
             // 
@@ -112,12 +107,11 @@
             this.dpFechaFin.FillColor = System.Drawing.SystemColors.ActiveCaption;
             this.dpFechaFin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dpFechaFin.Location = new System.Drawing.Point(476, 147);
-            this.dpFechaFin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dpFechaFin.Location = new System.Drawing.Point(357, 119);
             this.dpFechaFin.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dpFechaFin.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dpFechaFin.Name = "dpFechaFin";
-            this.dpFechaFin.Size = new System.Drawing.Size(291, 44);
+            this.dpFechaFin.Size = new System.Drawing.Size(218, 36);
             this.dpFechaFin.TabIndex = 12;
             this.dpFechaFin.Value = new System.DateTime(2025, 1, 17, 12, 42, 8, 61);
             // 
@@ -127,17 +121,16 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(64)))));
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(286, 62);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(214, 50);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(269, 32);
+            this.label3.Size = new System.Drawing.Size(214, 25);
             this.label3.TabIndex = 14;
             this.label3.Text = "Elija un rango de fechas";
             // 
             // btnConsultar
             // 
             this.btnConsultar.AutoRoundedCorners = true;
-            this.btnConsultar.BorderRadius = 26;
+            this.btnConsultar.BorderRadius = 21;
             this.btnConsultar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnConsultar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnConsultar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -145,10 +138,9 @@
             this.btnConsultar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(25)))), ((int)(((byte)(40)))));
             this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Location = new System.Drawing.Point(321, 214);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConsultar.Location = new System.Drawing.Point(241, 174);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(200, 54);
+            this.btnConsultar.Size = new System.Drawing.Size(150, 44);
             this.btnConsultar.TabIndex = 15;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
@@ -162,21 +154,21 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dpFechaFin);
-            this.panel1.Location = new System.Drawing.Point(0, 29);
+            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(841, 292);
+            this.panel1.Size = new System.Drawing.Size(632, 238);
             this.panel1.TabIndex = 16;
             // 
             // FrmFechas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(841, 322);
+            this.ClientSize = new System.Drawing.Size(631, 262);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmFechas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmFechas";

@@ -38,12 +38,14 @@
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dgvPrestamosMes = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.PanelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamosMes)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelSuperior
             // 
+            this.PanelSuperior.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PanelSuperior.Controls.Add(this.guna2ControlBox1);
             this.PanelSuperior.Controls.Add(this.guna2ControlBox2);
             this.PanelSuperior.Controls.Add(this.guna2ControlBox3);
@@ -60,7 +62,7 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.ForeColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(898, 2);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(894, 2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(32, 20);
             this.guna2ControlBox1.TabIndex = 3;
@@ -73,7 +75,7 @@
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.ForeColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(822, 2);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(818, 2);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(32, 20);
             this.guna2ControlBox2.TabIndex = 4;
@@ -86,7 +88,7 @@
             this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.ForeColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(860, 2);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(856, 2);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(32, 20);
             this.guna2ControlBox3.TabIndex = 5;
@@ -113,7 +115,7 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSlateGray;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -130,6 +132,14 @@
             this.dgvPrestamosMes.Size = new System.Drawing.Size(898, 380);
             this.dgvPrestamosMes.TabIndex = 10;
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Location = new System.Drawing.Point(0, 25);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(933, 474);
+            this.panel1.TabIndex = 11;
+            // 
             // FrmPrestamosMesTrabajadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -138,6 +148,7 @@
             this.ClientSize = new System.Drawing.Size(933, 500);
             this.Controls.Add(this.dgvPrestamosMes);
             this.Controls.Add(this.PanelSuperior);
+            this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPrestamosMesTrabajadores";
@@ -157,5 +168,6 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.DataGridView dgvPrestamosMes;
+        private System.Windows.Forms.Panel panel1;
     }
 }

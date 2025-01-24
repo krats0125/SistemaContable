@@ -61,62 +61,69 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Modelos\CuentaCobro.cs" />
+    <Compile Include="Modelos\PagoProveedores.cs" />
     <Compile Include="Modelos\PrestamoMensajero.cs" />
     <Compile Include="Modelos\PrestamoTrabajadores.cs" />
     <Compile Include="Modelos\Trabajador.cs" />
     <Compile Include="Modelos\PagoMensajeros.cs" />
-    <Compile Include="Presentacion\FrmFechas.cs">
+    <Compile Include="Presentacion\Modulo pago proveedores\FrmRetencion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FrmFechas.Designer.cs">
+    <Compile Include="Presentacion\Modulo pago proveedores\FrmRetencion.Designer.cs">
+      <DependentUpon>FrmRetencion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Modulos utilitarios\FrmFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Modulos utilitarios\FrmFechas.Designer.cs">
       <DependentUpon>FrmFechas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FrmLogin.cs">
+    <Compile Include="Presentacion\Modulo login\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FrmLogin.Designer.cs">
+    <Compile Include="Presentacion\Modulo login\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FrmMenu.cs">
+    <Compile Include="Presentacion\Modulo menu\FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FrmMenu.Designer.cs">
+    <Compile Include="Presentacion\Modulo menu\FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FrmPagoMensajeros.cs">
+    <Compile Include="Presentacion\Modulo mensajeros\FrmPagoMensajeros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FrmPagoMensajeros.Designer.cs">
+    <Compile Include="Presentacion\Modulo mensajeros\FrmPagoMensajeros.Designer.cs">
       <DependentUpon>FrmPagoMensajeros.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FrmPagoProveedores.cs">
+    <Compile Include="Presentacion\Modulo pago proveedores\FrmPagoProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FrmPagoProveedores.Designer.cs">
+    <Compile Include="Presentacion\Modulo pago proveedores\FrmPagoProveedores.Designer.cs">
       <DependentUpon>FrmPagoProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FrmPrestamos.cs">
+    <Compile Include="Presentacion\Modulos utilitarios\FrmPrestamos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FrmPrestamos.Designer.cs">
+    <Compile Include="Presentacion\Modulos utilitarios\FrmPrestamos.Designer.cs">
       <DependentUpon>FrmPrestamos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FrmPrestamosMesMensajeros.cs">
+    <Compile Include="Presentacion\Modulo mensajeros\FrmPrestamosMesMensajeros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FrmPrestamosMesMensajeros.Designer.cs">
+    <Compile Include="Presentacion\Modulo mensajeros\FrmPrestamosMesMensajeros.Designer.cs">
       <DependentUpon>FrmPrestamosMesMensajeros.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FrmPrestamosMesTrabajadores.cs">
+    <Compile Include="Presentacion\Modulo trabajadores\FrmPrestamosMesTrabajadores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FrmPrestamosMesTrabajadores.Designer.cs">
+    <Compile Include="Presentacion\Modulo trabajadores\FrmPrestamosMesTrabajadores.Designer.cs">
       <DependentUpon>FrmPrestamosMesTrabajadores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FrmTrabajadores.cs">
+    <Compile Include="Presentacion\Modulos utilitarios\FrmTrabajadores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FrmTrabajadores.Designer.cs">
+    <Compile Include="Presentacion\Modulos utilitarios\FrmTrabajadores.Designer.cs">
       <DependentUpon>FrmTrabajadores.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -124,35 +131,39 @@
     <Compile Include="Repositorios\ConvertirRepository.cs" />
     <Compile Include="Repositorios\CuentaDeCobroRepository.cs" />
     <Compile Include="Repositorios\PagoMensajerosRepository.cs" />
+    <Compile Include="Repositorios\PagoProveedoresRepository.cs" />
     <Compile Include="Repositorios\PrestamoMensajerosRepository.cs" />
     <Compile Include="Repositorios\PrestamoTrabajadoresRepository.cs" />
     <Compile Include="Repositorios\Utilitarios\CONEXION.cs" />
     <Compile Include="Repositorios\Utilitarios\SentenciasSqlServer.cs" />
-    <EmbeddedResource Include="Presentacion\FrmFechas.resx">
+    <EmbeddedResource Include="Presentacion\Modulo pago proveedores\FrmRetencion.resx">
+      <DependentUpon>FrmRetencion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Modulos utilitarios\FrmFechas.resx">
       <DependentUpon>FrmFechas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FrmLogin.resx">
+    <EmbeddedResource Include="Presentacion\Modulo login\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FrmMenu.resx">
+    <EmbeddedResource Include="Presentacion\Modulo menu\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FrmPagoMensajeros.resx">
+    <EmbeddedResource Include="Presentacion\Modulo mensajeros\FrmPagoMensajeros.resx">
       <DependentUpon>FrmPagoMensajeros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FrmPagoProveedores.resx">
+    <EmbeddedResource Include="Presentacion\Modulo pago proveedores\FrmPagoProveedores.resx">
       <DependentUpon>FrmPagoProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FrmPrestamos.resx">
+    <EmbeddedResource Include="Presentacion\Modulos utilitarios\FrmPrestamos.resx">
       <DependentUpon>FrmPrestamos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FrmPrestamosMesMensajeros.resx">
+    <EmbeddedResource Include="Presentacion\Modulo mensajeros\FrmPrestamosMesMensajeros.resx">
       <DependentUpon>FrmPrestamosMesMensajeros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FrmPrestamosMesTrabajadores.resx">
+    <EmbeddedResource Include="Presentacion\Modulo trabajadores\FrmPrestamosMesTrabajadores.resx">
       <DependentUpon>FrmPrestamosMesTrabajadores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FrmTrabajadores.resx">
+    <EmbeddedResource Include="Presentacion\Modulos utilitarios\FrmTrabajadores.resx">
       <DependentUpon>FrmTrabajadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

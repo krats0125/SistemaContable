@@ -74,7 +74,7 @@
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenu.Location = new System.Drawing.Point(0, 0);
             this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(183, 869);
+            this.PanelMenu.Size = new System.Drawing.Size(183, 829);
             this.PanelMenu.TabIndex = 1;
             // 
             // panel2
@@ -91,6 +91,7 @@
             // BtnMenu
             // 
             this.BtnMenu.CheckedState.ImageSize = new System.Drawing.Size(31, 31);
+            this.BtnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnMenu.HoverState.ImageSize = new System.Drawing.Size(30, 30);
             this.BtnMenu.Image = ((System.Drawing.Image)(resources.GetObject("BtnMenu.Image")));
             this.BtnMenu.ImageOffset = new System.Drawing.Point(0, 0);
@@ -269,15 +270,17 @@
             this.btnPagoProveedores.TabIndex = 0;
             this.btnPagoProveedores.Text = "Pago Proveedores";
             this.btnPagoProveedores.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnPagoProveedores.Click += new System.EventHandler(this.btnPagoProveedores_Click);
             // 
             // guna2ControlBox1
             // 
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.ForeColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(850, 2);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(837, 2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(32, 20);
             this.guna2ControlBox1.TabIndex = 3;
@@ -292,10 +295,11 @@
             this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox2.BackColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.ForeColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(774, 2);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(761, 2);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(32, 20);
             this.guna2ControlBox2.TabIndex = 4;
@@ -305,23 +309,25 @@
             this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox3.BackColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.guna2ControlBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.ForeColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(812, 2);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(799, 2);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(32, 20);
             this.guna2ControlBox3.TabIndex = 5;
             // 
             // PanelSuperior
             // 
+            this.PanelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.PanelSuperior.Controls.Add(this.guna2ControlBox1);
             this.PanelSuperior.Controls.Add(this.guna2ControlBox2);
             this.PanelSuperior.Controls.Add(this.guna2ControlBox3);
             this.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelSuperior.Location = new System.Drawing.Point(183, 0);
             this.PanelSuperior.Name = "PanelSuperior";
-            this.PanelSuperior.Size = new System.Drawing.Size(885, 25);
+            this.PanelSuperior.Size = new System.Drawing.Size(872, 25);
             this.PanelSuperior.TabIndex = 6;
             // 
             // panelCentral
@@ -331,7 +337,7 @@
             this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCentral.Location = new System.Drawing.Point(183, 25);
             this.panelCentral.Name = "panelCentral";
-            this.panelCentral.Size = new System.Drawing.Size(885, 844);
+            this.panelCentral.Size = new System.Drawing.Size(872, 804);
             this.panelCentral.TabIndex = 7;
             // 
             // guna2DragControl2
@@ -345,7 +351,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1068, 869);
+            this.ClientSize = new System.Drawing.Size(1055, 829);
             this.Controls.Add(this.panelCentral);
             this.Controls.Add(this.PanelSuperior);
             this.Controls.Add(this.PanelMenu);
